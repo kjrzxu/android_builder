@@ -1,4 +1,4 @@
-name: android_build
+name: TVBox_takagen99_build
 
 on:
   workflow_dispatch:
@@ -15,7 +15,7 @@ jobs:
           java-version: 1.8
       - id: get-project
         name: Get project name
-        run: echo "::set-output name=PROJECT::$(cat project-to-build)"
+        run: echo "::set-output name=PROJECT::$(cat tvbox-takagen99-to-build)"
       - name: Clone project
         run: git clone --depth=1 ${{ steps.get-project.outputs.PROJECT }} project
       - name: Build the app
